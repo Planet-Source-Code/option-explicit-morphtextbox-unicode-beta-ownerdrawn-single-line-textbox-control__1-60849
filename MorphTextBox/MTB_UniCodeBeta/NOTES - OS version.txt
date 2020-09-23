@@ -1,0 +1,22 @@
+2007-04-12
+Dear Matthew,
+the famous function has been transformed into a boolean variable with the same name.
+The value of the variable is assigned into the UserControl_Initialize event:
+
+   '1) is NT 2) is Xp or above
+   IsWinXPPlus = ((osv.dwPlatformID And VER_PLATFORM_WIN32_NT) = _
+                 VER_PLATFORM_WIN32_NT) And _
+                 ((osv.dwMajorVersion > 5) Or _
+                 (osv.dwMajorVersion = 5) And (osv.dwMinorVersion >= 1))
+
+Besides a flag to automatically read backward has been inserted in the function DrawText.
+Its name is: DT_RTLREADING
+
+
+I hope now it will work fine on both your systems... Excuse me for the time lost with this bug...:(
+I added another text box and a charmap button, but just to test the above flag, you can remove them (not the flag).
+
+
+That's all for now,
+all the best,
+Pietro
